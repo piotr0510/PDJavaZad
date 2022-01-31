@@ -16,9 +16,11 @@ public class Main {
         cat.takeForWalk();
         cat.feed();
 
-        Human me = new Human("Piotr", "Kowalski");
+        Human me = new Human("Piotr", "Kowalski",3600.0);
         Car car1 = new Car("Golf5", "Red", 220, 15000.0);
-
+        me.setSalary(-100.0);
+        me.setSalary(3200.0);
+        me.getSalary();
 
     }
 }
