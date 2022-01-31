@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        //tworzy zwierzęta
+
         Animal dog = new Animal("canis");
         Animal cat = new Animal("felis");
         dog.name = "Burek";
@@ -16,12 +16,8 @@ public class Main {
         cat.takeForWalk();
         cat.feed();
 
-
-
-
-
-
-
+        Human me = new Human("Piotr", "Kowalski");
+        Car car1 = new Car("Golf5", "Red", 220, 15000.0);
 
 
     }
