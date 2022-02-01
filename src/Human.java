@@ -1,3 +1,5 @@
+import devices.Car;
+
 public class Human {
 
 
@@ -53,6 +55,9 @@ public class Human {
             System.out.println("Sorry " + this.firstName + " You are too poor.");
         }
         }
+    public String toString() {
+        return firstName + " " + lastName + " " + salary + " " + pet + " " + car;
+    }
 
     }
 

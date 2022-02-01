@@ -1,3 +1,6 @@
+import devices.Car;
+import devices.Phone;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -38,6 +41,31 @@ public class Main {
         Human P3 = new Human("Mateusz", "Król", 1000000.0);
 
         P3.setCar(chg);
+
+        Car carX = new Car("AudiA4", "Red", 220, 2000.0);
+
+        Car carY = new Car("AudiA5", "Green", 240, 1500.0);
+
+        System.out.println("Print whole object:");
+        System.out.println(carX);
+        System.out.println(carY);
+
+        System.out.println("\ndevices.Car comparison using '==' : result: "+ (carX == carY));
+
+        System.out.println("devices.Car comparison using equals() - without override: was false");
+
+        System.out.println("devices.Car comparison using equals() - after override: "+ carX.equals(carY));
+
+        Phone phone = new Phone("abc", 9.0,"Android");
+
+        System.out.println(cat);
+
+        System.out.println(phone);
+
+        System.out.println(chg);
+
+        System.out.println(P3);
+
 
 
 

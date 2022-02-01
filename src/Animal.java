@@ -47,5 +47,8 @@ public class Animal {
             System.out.println("Your animal is dead, how you want to take him for a walk, you can try but that would look werid.");
         }
     }
+    public String toString(){
+        return species + " " + name + " " + weight+ "" + age ;
+    }
 
 }

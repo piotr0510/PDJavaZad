@@ -1,3 +1,5 @@
+package devices;
+
 public class Car {
 
     final public String model;
@@ -16,6 +18,10 @@ public class Car {
 
 
 
+
+    public String toString() {
+        return Speed + " " + model + " " + value + " " + color;
+    }
 
 
 
