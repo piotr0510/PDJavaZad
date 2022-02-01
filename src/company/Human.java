@@ -1,14 +1,17 @@
+package company;
+
 import devices.Car;
+import creatures.Animal;
 
 public class Human {
 
 
-    Animal pet;
-    String firstName;
-    String lastName;
-    private Double salary;
-    private Car car;
-    private Double cash= 55000.0;
+    public Animal pet;
+    public String firstName;
+    public String lastName;
+    public Double salary;
+    public Car car;
+    public Double cash= 55000.0;
 
     public Human(String firstName, String lastName, Double salary) {
         this.firstName = firstName;
@@ -22,6 +25,12 @@ public class Human {
         this.lastName = lastName;
         this.salary = salary;
         this.pet = pet;
+    }
+    public Human(String firstName, String lastName, Double salary, Car car) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.car = car;
     }
 
 

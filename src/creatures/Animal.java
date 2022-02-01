@@ -1,18 +1,24 @@
+package creatures;
+import company.Sellable;
+import company.Human;
+import company.Main;
+
+
 public class Animal implements Sellable {
     String species;
-    String name;
+    public String name;
     Double weight;
-    Integer age;
+    public Integer age;
     Boolean alive = true;
 
-    Animal(String species, String name, Double weight, Integer age) {
+     public Animal(String species, String name, Double weight, Integer age) {
         this.species = species;
         this.name = name;
         this.weight = weight;
         this.age = age;
 
     }
-    Animal(String species) {
+    public  Animal(String species) {
         this.species = species;
         this.alive = true;
         if (species == "canis")
@@ -22,21 +28,21 @@ public class Animal implements Sellable {
         else
             this.weight = 1.0;
     }
-    Double getWeight() {
+    public Double getWeight() {
         return this.weight;
     }
-    void setWeight(Double weight) {
+    public void setWeight(Double weight) {
         if (weight > 0) {this.weight = weight;}
         else {System.out.println("ERROR");}
     }
-    void feed() {
+    public void feed() {
         if (this.alive) weight = weight + 1.0;
         else {
 
-            System.out.println("Animal is dead, how you want to feed him?");
+            System.out.println("creatures.Animal is dead, how you want to feed him?");
         }
     }
-    void takeForWalk() {
+    public void takeForWalk() {
         if (this.alive) {
             weight = weight- 1.0;
             if (weight<=0.0) {

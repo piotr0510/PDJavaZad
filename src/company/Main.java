@@ -1,5 +1,10 @@
+package company;
+
+import company.Human;
 import devices.Car;
 import devices.Phone;
+import creatures.Animal;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -80,20 +85,34 @@ public class Main {
 
         Human seller1 = new Human("Damian", "Modrzew", 4000.0,petForSale);
 
-        Human seller2 = new Human("Jan", "Kamień", 70000.0);
+        Human seller2 = new Human("Jan", "Kamień", 70000.0,carForSale);
 
         System.out.println("checking if the buyer has money");
-        petForSale.sell(seller1, buyer1, 900.0);
+        petForSale.sell(buyer1, seller1, 0.0);
 
         System.out.println("Before transaction:" +
-                "Buyer cash: " + buyer1.getCash() + "Buyer animal: " + buyer1.pet +
-                "Seller cash: " + seller1.getCash() + "Seller animal: " + seller1.pet);
+                " Buyer cash: " + buyer1.getCash() + " Buyer animal: " + buyer1.pet +
+                "Seller cash: " + seller1.getCash() + " Seller animal: " + seller1.pet);
 
         petForSale.sell(seller1, buyer1, 500.0);
 
         System.out.println("After transaction:" +
-                "Buyer cash: " + buyer1.getCash() + "Buyer animal: " + buyer1.pet +
-                "Seller cash: " + seller1.getCash() + "Seller animal: " + seller1.pet);
+                " Buyer cash: " + buyer1.getCash() + " Buyer animal: " + buyer1.pet +
+                " Seller cash: " + seller1.getCash() + " Seller animal: " + seller1.pet);
+
+
+
+        carForSale.sell(seller2, buyer2, 0.0);
+
+        System.out.println("Before transaction:" + " Buyer cash: " + buyer2.getCash() + " Buyer car: " + buyer2.getCar() +
+                " Seller cash: " + seller2.getCash() + " Seller car: " + seller2.getCar());
+
+        carForSale.sell(buyer2, seller2, 3000.0);
+
+        System.out.println("After transaction:" + " Buyer cash: " + buyer2.getCash() + " Buyer car: " + buyer2.getCar() +
+                " Seller cash: " + seller2.getCash() + " Seller car: " + seller2.getCar());
+
+
 
     }
 }
