@@ -4,20 +4,16 @@ import company.Human;
 import devices.Car;
 import devices.Phone;
 import creatures.Animal;
+import creatures.Pet;
 
 
 public class Main {
     public static void main(String[] args) {
 
 
-        Animal dog = new Animal("canis");
-        Animal cat = new Animal("felis");
-        dog.name = "Burek";
-        dog.setWeight(50.0);
-        dog.age = 9;
-        cat.name = "Mruczek";
-        cat.setWeight(5.0);
-        cat.age = 5;
+        Animal dog = new Pet("canis","Burek",50.0,9);
+        Animal cat = new Pet("felis","Mruczek",5.0,5);
+
 
         dog.takeForWalk();
         dog.feed();
@@ -75,7 +71,7 @@ public class Main {
 
         carX.turnOn();
 
-        Animal petForSale = new Animal("dog", "Max",50.0,3);
+        Animal petForSale = new Pet("dog", "Max",50.0,3);
 
         Car carForSale = new Car( "Maluch", "Purple", 160, 1000.0);
 

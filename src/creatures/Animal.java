@@ -4,7 +4,7 @@ import company.Human;
 import company.Main;
 
 
-public class Animal implements Sellable {
+public abstract class Animal implements Sellable,Feedable {
     String species;
     public String name;
     Double weight;
@@ -35,12 +35,18 @@ public class Animal implements Sellable {
         if (weight > 0) {this.weight = weight;}
         else {System.out.println("ERROR");}
     }
-    public void feed() {
-        if (this.alive) weight = weight + 1.0;
+    public void feed()
+    {
+
+    }
+
+    public void feed(double foodWeight) {
+        if (this.alive) weight = weight + foodWeight/3;
         else {
 
             System.out.println("creatures.Animal is dead, how you want to feed him?");
         }
+
     }
     public void takeForWalk() {
         if (this.alive) {
