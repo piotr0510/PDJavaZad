@@ -3,7 +3,7 @@ package devices;
 import company.Human;
 import company.Sellable;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
 
     final public String model;
     public String color;
@@ -45,5 +45,7 @@ public class Car extends Device implements Sellable {
         }
 
 
+
     }
+    public abstract void refuel();
 }
