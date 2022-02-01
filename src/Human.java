@@ -5,11 +5,13 @@ public class Human {
     String firstName;
     String lastName;
     private Double salary;
+    private Car car;
 
     public Human(String firstName, String lastName, Double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary= salary;
+
 
 
     }
@@ -34,7 +36,23 @@ public class Human {
         System.out.println("wynagrodzenie:");
         return this.salary;
     }
+        public Car getCar()
 
+        {
+            return car;
+        }
 
+    public void setCar(Car car) {
+        if (this.salary > car.value) {
+            this.car = car;
+            System.out.println("Congratulations " + this.firstName + "! You bought " +  car.model + "for cash!");
+        } else if (salary > car.value / 12) {
+            this.car = car;
+            System.out.println("Congratulations " + this.firstName + "! You bought " + car.model + " on instalments!");
+        } else {
+            System.out.println("Sorry " + this.firstName + " You are too poor.");
+        }
+        }
 
-}
+    }
+
