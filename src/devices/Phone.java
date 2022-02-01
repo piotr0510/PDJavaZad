@@ -1,6 +1,6 @@
 package devices;
 
-public class Phone extends Device{
+public class Phone extends Device {
 
     final public String model;
     final public Double screenSize;
@@ -19,4 +19,7 @@ public class Phone extends Device{
         this.mode = "On";
         System.out.println(this.producer+" "+this.model+" starts working...");
     }
+
+
+
 }

@@ -8,6 +8,7 @@ public class Human {
     String lastName;
     private Double salary;
     private Car car;
+    private Double cash= 55000.0;
 
     public Human(String firstName, String lastName, Double salary) {
         this.firstName = firstName;
@@ -15,8 +16,16 @@ public class Human {
         this.salary= salary;
 
 
-
     }
+    public Human(String firstName, String lastName, Double salary, Animal pet) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.pet = pet;
+    }
+
+
+
     //ustawia nowe wynagrodzenie
     void setSalary(Double salary) {
         if (salary < 0) {
@@ -45,6 +54,12 @@ public class Human {
         }
 
     public void setCar(Car car) {
+
+        if (car == null) {
+            this.car = null;
+        }
+        else
+
         if (this.salary > car.value) {
             this.car = car;
             System.out.println("Congratulations " + this.firstName + "! You bought " +  car.model + "for cash!");
@@ -58,6 +73,16 @@ public class Human {
     public String toString() {
         return firstName + " " + lastName + " " + salary + " " + pet + " " + car;
     }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
+
 
     }
 

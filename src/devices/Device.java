@@ -1,6 +1,11 @@
-package devices;
 
-public abstract class Device {
+package devices;
+import src.Human;
+import src.saleable;
+
+
+
+public abstract class Device implements Sellable {
 
     public String producer;
 

@@ -70,9 +70,30 @@ public class Main {
 
         carX.turnOn();
 
+        Animal petForSale = new Animal("dog", "Max",50.0,3);
 
+        Car carForSale = new Car( "Maluch", "Purple", 160, 1000.0);
 
+        Human buyer1 = new Human("Mariusz", "Kaczmarek", 3500.0);
 
+        Human buyer2 = new Human("Damian", "Modrzew", 5500.0);
+
+        Human seller1 = new Human("Damian", "Modrzew", 4000.0,petForSale);
+
+        Human seller2 = new Human("Jan", "Kamień", 70000.0);
+
+        System.out.println("checking if the buyer has money");
+        petForSale.sell(seller1, buyer1, 900.0);
+
+        System.out.println("Before transaction:" +
+                "Buyer cash: " + buyer1.getCash() + "Buyer animal: " + buyer1.pet +
+                "Seller cash: " + seller1.getCash() + "Seller animal: " + seller1.pet);
+
+        petForSale.sell(seller1, buyer1, 500.0);
+
+        System.out.println("After transaction:" +
+                "Buyer cash: " + buyer1.getCash() + "Buyer animal: " + buyer1.pet +
+                "Seller cash: " + seller1.getCash() + "Seller animal: " + seller1.pet);
 
     }
 }
