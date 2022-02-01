@@ -1,6 +1,6 @@
 package devices;
 
-public class Car {
+public class Car extends Device{
 
     final public String model;
     public String color;
@@ -21,6 +21,10 @@ public class Car {
 
     public String toString() {
         return Speed + " " + model + " " + value + " " + color;
+    }
+    public void turnOn() {
+        this.mode = "On";
+        System.out.println(this.producer+" "+this.model+" starts working...");
     }
 
 
